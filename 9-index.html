@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-all">
+    <div class="main-vidoe">
+      <div
+        class="video"
+      >
+        <video
+          class="inc"
+          style="
+          height: 500px;
+          width: 500px;
+          border-radius: 50%;
+          object-fit: fill;
+          display: none;
+        "
+          controls
+          loop
+          autoplay
+        >
+          <source
+            src="./videos/pexels-taryn-elliott-9140345 (1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video
+          class="rst"
+          style="
+          height: 500px;
+          width: 500px;
+          border-radius: 50%;
+          object-fit: fill;
+          display: none;
+        "
+          controls
+          loop
+          autoplay
+        >
+          <source
+            src="./videos/pexels-taryn-elliott-5548298 (2160p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video
+          class="dcr"
+          style="
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            object-fit: fill;
+            display: none;
+          "
+          controls
+          loop
+          autoplay
+        >
+          <source
+            src="./videos/pexels-how-far-from-home-5592502 (1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+
+   
+    <div class="result-div">
+      <h3 class="result">0</h3>
+    </div>
+    <div
+    class="main"
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 5px;
+      margin: 0 auto;
+    "
+  >
+  <button onclick="decrease()">Decrease</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="increase()">Increase</button>
+     
+    </div>
+
+
+
+    <script>
+      let x = 0;
+      let resultEl = document.querySelector(".result");
+      const videoB = document.querySelector(".inc");
+      const videoI = document.querySelector(".rst");
+      const videoU = document.querySelector(".dcr");
+
+      function decrease() {
+        x -= 1;
+        resultEl.innerHTML = `${x}`;
+
+        videoB.style.display = "block";
+        videoI.style.display = "none";
+        videoU.style.display = "none";
+        
+        videoB.controls = false;
+       video.play();
+      }
+
+      function reset() {
+        x = 0;
+
+        resultEl.innerHTML = `${x}`;
+
+        videoI.play;
+        videoI.style.display = "block";
+        videoB.style.display = "none";
+        videoU.style.display = "none";
+        videoI.controls = false;
+        videoI.play();
+      }
+
+      function increase() {
+        x += 1;
+
+        resultEl.innerHTML = `${x}`;
+
+        videoU.style.display = "block";
+        videoB.style.display = "none";
+        videoI.style.display = "none";
+        videoU.controls = false;
+        videoU.play();
+      }
+    </script>
+  </body>
+</html>
